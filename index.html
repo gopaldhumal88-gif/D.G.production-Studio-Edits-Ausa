@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <title>D.G Produration Studio &amp; Edit | Wedding Photographer &amp; Photo Studio in Ausa</title>
+   <link rel="icon" href="logo.jpeg" type="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="D.G Produration Studio &amp; Edit is a wedding photographer and professional photo studio in Ausa, Latur. We offer wedding, pre‑wedding, kids, family and passport photo services with premium albums." />
+
+  <!-- Icons (social media) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Local Business / Photography Studio Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhotographyStudio",
+    "name": "D.G Produration Studio & Edit",
+    "image": "https://your-domain.com/wedding-photographer-ausa-studio.jpg",
+    "@id": "https://your-domain.com/",
+    "url": "https://your-domain.com/",
+    "telephone": "+91-9876543210",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Azad Chowk, next to Siddhivinayak Bank, Ausa",
+      "addressLocality": "Ausa",
+      "addressRegion": "Maharashtra",
+      "postalCode": "413520",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.2493,
+      "longitude": 76.4920
+    },
+    "priceRange": "₹₹",
+    "areaServed": [
+      "Ausa",
+      "Latur",
+      "Latur district"
+    ],
+    "sameAs": [
+      "https://instagram.com/dg.produration.studio",
+      "https://www.facebook.com/D.GProdurationStudioEdit"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-main:#050507;
+      --bg-alt:#0b0b10;
+      --accent:#d4af37;
+      --accent-soft:rgba(212,175,55,0.11);
+      --text:#f5f5f5;
+      --muted:#b3b3b3;
+      --muted-soft:#8f8f97;
+      --border-subtle:rgba(255,255,255,0.06);
+      --error:#ff5555;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+
+    html{
+      scroll-behavior:smooth;
+      /* fixed navbar साठी offset */
+      scroll-padding-top:60px;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
+      background:radial-gradient(circle at top,#171722 0,var(--bg-main) 55%);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit;}
+
+    h1,h2,h3,h4{font-weight:550;letter-spacing:0.06em;text-transform:uppercase;}
+    p,li{color:var(--muted);font-size:14px;}
+    small{color:var(--muted-soft);font-size:12px;}
+
+    /* scroll reveal animation */
+    @keyframes fade-up{
+      from{opacity:0;transform:translateY(24px) scale(0.98);}
+      to{opacity:1;transform:translateY(0) scale(1);}
+    }
+    .reveal{
+      opacity:0;
+      transform:translateY(24px) scale(0.98);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0) scale(1);
+      animation:fade-up .7s ease forwards;
+    }
+
+    header{
+      position:fixed;inset:0 0 auto;
+      z-index:30;
+      background:rgba(5,5,7,0.94);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--border-subtle);
+    }
+    .nav-wrap{
+      max-width:1120px;margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:10px 18px;
+    }
+    .logo{
+      font-size:17px;font-weight:600;letter-spacing:0.16em;
+      text-transform:uppercase;
+    }
+    .logo span{color:var(--accent);}
+
+    nav{display:flex;align-items:center;gap:14px;}
+    nav a{
+      font-size:11px;text-transform:uppercase;
+      letter-spacing:0.14em;color:var(--muted-soft);
+      position:relative;padding:4px 0;
+    }
+    nav a::after{
+      content:"";position:absolute;left:0;bottom:-4px;
+      width:0;height:1px;background:var(--accent);
+      transition:width .22s ease;
+    }
+    nav a:hover{color:var(--text);}
+    nav a:hover::after{width:100%;}
+    .nav-cta{
+      padding:7px 16px;border-radius:999px;
+      border:1px solid var(--accent);
+      font-size:11px;margin-left:4px;color:var(--accent);
+      letter-spacing:0.16em;
+    }
+
+    .nav-toggle{
+      display:none;
+      width:34px;height:26px;
+      border:none;outline:none;background:transparent;
+      position:relative;cursor:pointer;
+    }
+    .nav-toggle span{
+      position:absolute;left:0;right:0;height:2px;
+      background:#f5f5f5;border-radius:999px;
+      transition:transform .25s ease,opacity .2s ease,top .25s ease,bottom .25s ease;
+    }
+    .nav-toggle span:nth-child(1){top:4px;}
+    .nav-toggle span:nth-child(2){top:12px;}
+    .nav-toggle span:nth-child(3){bottom:4px;}
+    .nav-toggle.active span:nth-child(1){top:12px;transform:rotate(45deg);}
+    .nav-toggle.active span:nth-child(2){opacity:0;}
+    .nav-toggle.active span:nth-child(3){bottom:10px;transform:rotate(-45deg);}
+
+    main{padding-top:68px;}
+    section{
+      max-width:1120px;margin:0 auto;
+      padding:30px 18px 4px;
+    }
+    #contact{
+      padding-top:24px;
+      padding-bottom:4px;
+    }
+    .section-head{
+      display:flex;align-items:flex-end;justify-content:space-between;
+      margin-bottom:18px;gap:12px;
+    }
+    .section-title{
+      font-size:17px;letter-spacing:0.20em;
+      text-transform:uppercase;position:relative;
+      padding-bottom:4px;
+    }
+    .section-title::after{
+      content:"";position:absolute;left:0;bottom:0;
+      width:38px;height:1px;
+      background:linear-gradient(to right,var(--accent),transparent);
+    }
+    .section-sub{font-size:12px;color:var(--muted-soft);}
+
+    .btn-main,.btn-ghost,.inline-btn{
+      display:inline-block;border-radius:999px;
+      font-size:11px;letter-spacing:0.18em;
+      text-transform:uppercase;
+      padding:9px 20px;
+      transition:transform .16s ease,box-shadow .18s ease,background .16s ease,color .16s ease,border-color .16s ease;
+      cursor:pointer;
+    }
+    .btn-main{
+      background:var(--accent);color:#050507;font-weight:500;
+      border:none;box-shadow:0 12px 30px rgba(0,0,0,0.55);
+      transform:translateY(0);
+    }
+    .btn-main:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 36px rgba(0,0,0,0.65);
+    }
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,0.28);
+      color:#f5f5f5;background:transparent;
+    }
+    .btn-ghost:hover{
+      background:rgba(255,255,255,0.08);
+    }
+    .inline-btn{
+      font-size:11px;padding:7px 16px;
+    }
+    .whatsapp{background:#25D366;color:#050507;border:none;}
+    .whatsapp:hover{background:#22c45d;}
+    .call{background:#1d72ff;color:#f5f5f5;border:none;}
+    .call:hover{background:#1a63de;}
+
+    .btn-small{
+      display:inline-block;
+      margin-top:10px;
+      padding:7px 16px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.28);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.16em;
+      color:#f5f5f5;
+      background:transparent;
+      transition:background .2s ease, color .2s ease, border-color .2s ease, transform .16s ease;
+      cursor:pointer;
+    }
+    .btn-small:hover{
+      background:var(--accent);
+      color:#050507;
+      border-color:var(--accent);
+      transform:translateY(-1px);
+    }
+
+    .card-hover{
+      position:relative;
+      overflow:hidden;
+      transform:translateY(10px) scale(0.99);
+      opacity:0;
+      transition:transform .35s ease, box-shadow .25s ease,
+                 border-color .25s ease, background .25s ease,
+                 opacity .35s ease;
+    }
+    .card-hover::before{
+      content:"";
+      position:absolute;inset:0;
+      background:radial-gradient(circle at top,var(--accent-soft),transparent 55%);
+      opacity:0;transition:opacity .25s ease;
+      pointer-events:none;
+    }
+    .card-hover.visible{
+      opacity:1;
+      transform:translateY(0) scale(1);
+    }
+    .card-hover:hover{
+      transform:translateY(-4px) scale(1.01);
+      box-shadow:0 18px 40px rgba(0,0,0,0.65);
+      border-color:rgba(212,175,55,0.6);
+      background:rgba(9,9,13,0.98);
+    }
+    .card-hover:hover::before{opacity:1;}
+
+    .hero{
+      min-height:calc(100vh - 72px);
+      display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
+      gap:32px;align-items:center;
+    }
+    .hero-text{padding-top:8px;}
+    .hero-kicker{
+      font-size:11px;text-transform:uppercase;
+      letter-spacing:0.26em;color:var(--accent);
+      margin-bottom:10px;
+    }
+    .hero-text h1{
+      font-size:34px;line-height:1.18;
+      margin-bottom:12px;
+    }
+    .hero-text p{
+      max-width:440px;font-size:14px;
+      color:var(--muted);margin-bottom:18px;
+    }
+    .hero-meta{
+      font-size:11px;color:var(--muted-soft);
+      margin-bottom:20px;letter-spacing:0.18em;
+      text-transform:uppercase;
+    }
+    .hero-meta span{
+      margin-right:14px;padding-right:10px;
+      border-right:1px solid rgba(255,255,255,0.09);
+    }
+    .hero-meta span:last-child{border-right:none;padding-right:0;margin-right:0;}
+    .hero-buttons a{margin-right:8px;margin-bottom:8px;}
+
+    .hero-img{
+      border-radius:22px;overflow:hidden;position:relative;
+      background:#050507;border:1px solid var(--border-subtle);
+    }
+    @keyframes float-slow{
+      0%{transform:translateY(0) scale(1.03);}
+      50%{transform:translateY(-6px) scale(1.035);}
+      100%{transform:translateY(0) scale(1.03);}
+    }
+    .hero-img img{
+      width:100%;height:100%;object-fit:cover;
+      transition:transform 8s ease-out,opacity 1.6s ease-out;
+      animation:float-slow 12s ease-in-out infinite;
+    }
+    .hero-img:hover img{
+      transform:scale(1.06);
+    }
+
+    .hero-tag{
+      position:absolute;left:16px;bottom:16px;
+      background:rgba(5,5,7,0.88);
+      padding:7px 14px;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.14);
+      font-size:11px;color:var(--muted-soft);
+    }
+
+    .surface{
+      border-radius:18px;
+      padding:18px 18px 20px;
+      background:rgba(9,9,13,0.96);
+      border:1px solid var(--border-subtle);
+    }
+
+    .about-layout{
+      display:flex;flex-wrap:wrap;gap:24px;
+    }
+    .about-photo{
+      flex:0 0 260px;border-radius:16px;overflow:hidden;
+      background:#141418;height:260px;
+    }
+    .about-photo img{width:100%;height:100%;object-fit:cover;}
+    .about-content{flex:1 1 260px;}
+    .about-content h3{font-size:17px;margin-bottom:6px;}
+    .about-stats{
+      display:flex;flex-wrap:wrap;gap:14px;
+      margin-top:12px;
+    }
+    .stat-box{
+      flex:0 0 120px;
+      border-radius:12px;padding:10px 12px;
+      background:rgba(255,255,255,0.015);
+      border:1px solid rgba(255,255,255,0.08);
+      text-align:left;
+    }
+    .stat-number{font-size:18px;font-weight:550;color:var(--accent);}
+    .stat-label{font-size:11px;color:var(--muted-soft);text-transform:uppercase;letter-spacing:0.14em;}
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:12px;
+    }
+    .shot{
+      position:relative;overflow:hidden;
+      border-radius:16px;background:#111;
+      height:260px;cursor:zoom-in;
+      border:1px solid var(--border-subtle);
+      transition:transform .4s ease,opacity .4s ease;
+    }
+    .shot img{
+      width:100%;height:100%;object-fit:cover;
+      transition:transform .4s ease,opacity .4s ease;
+    }
+    .shot-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,0.92),transparent);
+      display:flex;align-items:flex-end;justify-content:space-between;
+      padding:9px 11px;font-size:10px;color:#f1f1f1;
+      letter-spacing:0.16em;text-transform:uppercase;
+      opacity:0;transition:opacity .28s ease;
+    }
+    .shot:hover img{transform:scale(1.03);opacity:0.94;}
+    .shot:hover .shot-overlay{opacity:1;}
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:16px;
+    }
+    .service-card{
+      border-radius:14px;padding:16px 16px 14px;
+      background:rgba(255,255,255,0.01);
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .service-tag{
+      font-size:11px;color:var(--muted-soft);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.16em;
+    }
+
+    .packages-section{
+      max-width:1120px;margin:0 auto;
+      padding:30px 18px 4px;
+    }
+    .packages-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:16px;
+    }
+    .package-card{
+      border-radius:14px;
+      padding:18px 18px 16px;
+      background:rgba(255,255,255,0.012);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .package-card-inner{
+      position:relative;z-index:1;
+    }
+    .package-card h3{
+      font-size:14px;margin-bottom:4px;
+      letter-spacing:0.10em;text-transform:uppercase;
+    }
+    .package-price{
+      font-size:16px;color:var(--accent);
+      margin:4px 0 8px;
+    }
+    .package-tag{
+      font-size:11px;color:var(--muted-soft);margin-bottom:6px;
+    }
+    .package-card ul{
+      list-style:none;font-size:13px;color:var(--muted);
+    }
+    .package-card li{margin-bottom:4px;}
+
+    .testimonials{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:14px;
+    }
+    .quote{
+      background:rgba(255,255,255,0.015);
+      border-radius:14px;padding:16px 16px 14px;
+      border:1px solid rgba(255,255,255,0.08);
+      font-size:13px;color:var(--muted);
+    }
+    .quote strong{color:var(--text);font-size:12px;}
+
+    .contact-layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+      gap:20px;
+    }
+    .contact-info{
+      border-radius:16px;padding:16px;
+      background:rgba(255,255,255,0.015);
+      border:1px solid rgba(255,255,255,0.06);
+      font-size:13px;color:var(--muted);
+    }
+
+    /* LIGHTBOX */
+    .lightbox-backdrop{
+      position:fixed;inset:0;
+      background:rgba(0,0,0,0.88);
+      display:flex;align-items:center;justify-content:center;
+      z-index:50;opacity:0;pointer-events:none;
+      transition:opacity .25s ease;
+    }
+    .lightbox-backdrop.active{opacity:1;pointer-events:auto;}
+
+   .lightbox-inner{
+  width:700px;      /* box width */
+  height:500px;     /* box height */
+  position:relative;
+}
+
+.lightbox-inner img{
+  width:100%;
+  height:100%;
+  object-fit:contain;   /* पूर्ण image, नो crop */
+  display:block;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.7);
+  background:#000;      /* रिकामा भाग काळा दिसेल */
+}
+
+
+    .lightbox-close{
+      position:absolute;top:-25px;right:0;
+      font-size:11px;letter-spacing:0.18em;
+      text-transform:uppercase;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.6);
+      background:rgba(5,5,7,0.95);color:#f5f5f5;
+      cursor:pointer;
+    }
+    @media(max-width:600px){
+      .lightbox-inner{
+        max-width:90vw;
+        max-height:80vh;
+      }
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,0.12);
+      text-align:center;font-size:11px;color:var(--muted-soft);
+      padding:14px 10px 18px;margin-top:30px;
+    }
+    .social-icons{
+      margin-top:8px;
+      display:flex;
+      justify-content:center;
+      gap:10px;
+    }
+    .social-icons a{
+      width:30px;height:30px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.4);
+      display:flex;align-items:center;justify-content:center;
+      font-size:14px;color:var(--muted-soft);
+      transition:background .2s ease,color .2s ease,border-color .2s ease,transform .16s ease;
+    }
+    .social-icons a:hover{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#050507;
+      transform:translateY(-1px);
+    }
+
+    @media(max-width:1024px){
+      .hero{grid-template-columns:1fr;gap:24px;padding-top:20px;}
+      .hero-img{max-height:380px;}
+      .contact-layout{grid-template-columns:1fr;}
+    }
+    @media(max-width:800px){
+      .nav-toggle{display:block;}
+      nav{
+        position:fixed;top:56px;right:12px;left:12px;
+        background:#050507;border-radius:16px;
+        border:1px solid rgba(255,255,255,0.12);
+        padding:10px 10px 12px;
+        display:none;flex-direction:column;gap:4px;
+      }
+      nav.open{display:flex;}
+      nav a{
+        margin:2px 2px;padding:8px 8px;
+        border-radius:8px;font-size:11px;
+      }
+      nav a:hover{background:rgba(255,255,255,0.06);}
+      .nav-cta{margin-left:0;text-align:center;width:100%;}
+      .section-head{flex-direction:column;align-items:flex-start;gap:4px;}
+      .hero-text h1{font-size:27px;}
+      section{padding:26px 16px 4px;}
+      #contact{padding-top:20px;padding-bottom:2px;}
+      .shot{height:220px;}
+    }
+    @media(max-width:600px){
+      .hero{gap:20px;}
+      .hero-img{min-height:260px;}
+      .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .about-photo{flex:1 1 100%;height:220px;}
+    }
+  </style>
+</head>
+<body>
+    
+<header>
+  <div class="nav-wrap">
+    <div class="logo"><span>D.G</span> Produration Studio &amp; Edit</div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#studio-services">Studio</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact" class="nav-cta">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text reveal">
+      <div class="hero-kicker">• Photography Studio</div>
+      <h1>D.G Produration Studio &amp; Edit – wedding photographer &amp; photo studio in Ausa.</h1>
+      <p>Wedding, pre‑wedding, kids, family portraits आणि studio passport photos – Ausa आणि आसपासच्या भागासाठी professional photography.</p>
+      <div class="hero-meta">
+        <span>Wedding • Pre‑Wedding</span>
+        <span>Kids &amp; Family</span>
+        <span>Studio • Events</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn-main">View Gallery</a>
+        <a href="#contact" class="btn-ghost">Book a Session</a>
+        <a href="https://wa.me/919922227588?text=Hi%20D.G%20Produration%20Studio%20%26%20Edit%2C%20mala%20wedding%20%2F%20studio%20shoot%20sathi%20booking%20mahiti%20pahije."
+           class="btn-ghost" style="border-color:#25D366;color:#25D366;">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-img reveal card-hover">
+      <img src="logo 11.jpeg" alt="Wedding photographer and photo studio in Ausa at D.G Produration Studio &amp; Edit" />
+      <div class="hero-tag">Now accepting bookings for 2026–27</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">About</h2>
+      <div class="section-sub">D.G Produration Studio &amp; Edit – Ausa</div>
+    </div>
+    <div class="surface card-hover">
+      <div class="about-layout">
+        <div class="about-photo card-hover">
+          <img src="logo 11.jpeg" alt="Owner and lead wedding photographer at D.G Produration Studio &amp; Edit in Ausa" />
+        </div>
+        <div class="about-content">
+          <h3>D.G Produration Studio &amp; Edit</h3>
+          <p>मागील 5 वर्षांपासून Ausa आणि आसपासच्या भागात आम्ही weddings, portraits आणि events चे शूट्स करत आहोत. आमच्यासाठी फोटो म्हणजे फक्त image नाही, तर एक story आहे जी वर्षानुवर्षे जपली जाते.</p>
+          <p>Local wedding photographer in Ausa म्हणून आम्ही subtle lighting, clean compositions आणि natural moments वर भर देतो, जेणेकरून प्रत्येक फोटो timeless वाटेल.</p>
+          <div class="about-stats">
+            <div class="stat-box card-hover">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-box card-hover">
+              <div class="stat-number">150+</div>
+              <div class="stat-label">Weddings Shot</div>
+            </div>
+            <div class="stat-box card-hover">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">Gallery</h2>
+      <div class="section-sub">Selected work from D.G Produration Studio &amp; Edit</div>
+    </div>
+    <div class="surface card-hover" style="padding:16px;">
+      <div class="gallery-grid">
+        <div class="shot card-hover" data-full="1.jpeg">
+          <img src="1.jpeg" alt="Wedding photographer in Ausa capturing couple under mandap lights" />
+          <div class="shot-overlay"><span>Wedding</span><span>Ausa</span></div>
+        </div>
+        <div class="shot card-hover" data-full="2.jpeg">
+          <img src="2.jpeg" alt="Pre‑wedding photoshoot near lake in Ausa" />
+          <div class="shot-overlay"><span>Pre‑Wedding</span><span>Ausa</span></div>
+        </div>
+        <div class="shot card-hover" data-full="3.jpeg">
+          <img src="3.jpeg" alt="Kids photoshoot at D.G Produration Studio &amp; Edit photo studio in Ausa" />
+          <div class="shot-overlay"><span>Wedding</span><span>Ausa</span></div>
+        </div>
+        <div class="shot card-hover" data-full="4.jpeg">
+          <img src="4.jpeg" alt="Family portrait photography session in Ausa home" />
+          <div class="shot-overlay"><span>Wedding</span><span>Ausa</span></div>
+        </div>
+        <div class="shot card-hover" data-full="unnamed-8.jpg">
+          <img src="unnamed-8.jpg" alt="Passport and visa photo service at Ausa photo studio" />
+          <div class="shot-overlay"><span>Wedding</span><span>Ausa</span></div>
+        </div>
+        <div class="shot card-hover" data-full="unnamed-9.jpg">
+          <img src="unnamed-9.jpg" alt="Event photography coverage in Ausa function hall" />
+          <div class="shot-overlay"><span>Wedding</span><span>Ausa</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">Services</h2>
+      <div class="section-sub">Wedding • Portraits • Events</div>
+    </div>
+    <div class="surface card-hover">
+      <div class="services-grid">
+        <article class="service-card card-hover">
+          <div class="service-tag">Weddings</div>
+          <h3>Wedding Photography</h3>
+          <p>D.G Produration Studio &amp; Edit कडून full‑day wedding coverage with candid + traditional style.</p>
+          <a href="#contact" class="btn-small">Book Now</a>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Pre‑Wedding</div>
+          <h3>Pre‑Wedding Shoots</h3>
+          <p>Creative pre‑wedding concepts, Ausa आसपासच्या locations वर cinematic shots.</p>
+          <a href="#contact" class="btn-small">Plan Shoot</a>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Families</div>
+          <h3>Kids &amp; Family</h3>
+          <p>Kids birthdays, family portraits आणि maternity sessions – studio किंवा outdoor.</p>
+          <a href="#contact" class="btn-small">Enquire</a>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Events</div>
+          <h3>Events Coverage</h3>
+          <p>Engagement, naming ceremony, corporate events आणि cultural programs साठी coverage.</p>
+          <a href="#contact" class="btn-small">Check Dates</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO SERVICES -->
+  <section id="studio-services" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">Studio Services</h2>
+      <div class="section-sub">Daily studio काम आणि तत्काळ सेवा</div>
+    </div>
+    <div class="surface card-hover">
+      <div class="services-grid">
+        <article class="service-card card-hover">
+          <div class="service-tag">Passport / ID</div>
+          <h3>Passport &amp; ID Photos</h3>
+          <p>Visa, passport, Aadhar आणि इतर ID cards साठी नियमांप्रमाणे फोटो – instant prints आणि soft copy.</p>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Printing</div>
+          <h3>Photo Printing</h3>
+          <p>4x6 पासून मोठ्या size पर्यंत premium photo prints – matte किंवा glossy options.</p>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Albums</div>
+          <h3>Albums &amp; Lamination</h3>
+          <p>Wedding आणि event albums, photo lamination आणि calendar prints.</p>
+        </article>
+        <article class="service-card card-hover">
+          <div class="service-tag">Frames</div>
+          <h3>Photo Frames</h3>
+          <p>Wall frames आणि table frames – विविध sizes आणि designs उपलब्ध.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages" class="packages-section reveal">
+    <div class="section-head">
+      <h2 class="section-title">Packages</h2>
+      <div class="section-sub">Simple, transparent ideas for pricing</div>
+    </div>
+    <div class="surface card-hover">
+      <div class="packages-grid">
+        <div class="package-card card-hover">
+          <div class="package-card-inner">
+            <h3>Essential</h3>
+            <div class="package-tag">Small functions / studio</div>
+            <div class="package-price">From ₹2000</div>
+            <ul>
+              <li>2–3 तासांचे coverage (studio / home, Ausa).</li>
+              <li>50+ edited photos (soft copy).</li>
+              <li>Basic colour correction.</li>
+            </ul>
+            <a href="#contact" class="btn-small">Enquire</a>
+          </div>
+        </div>
+
+        <div class="package-card card-hover">
+          <div class="package-card-inner">
+            <h3>Wedding Day</h3>
+            <div class="package-tag">Full wedding coverage</div>
+            <div class="package-price">From ₹7000</div>
+            <ul>
+              <li>Full‑day coverage with 2 cameras (if needed).</li>
+              <li>300+ edited photos.</li>
+              <li>Highlight film (3–5 min), album optional.</li>
+            </ul>
+            <a href="#contact" class="btn-small">Book Wedding</a>
+          </div>
+        </div>
+
+        <div class="package-card card-hover">
+          <div class="package-card-inner">
+            <h3>Premium</h3>
+            <div class="package-tag">Pre‑wedding + wedding</div>
+            <div class="package-price">Custom quote</div>
+            <ul>
+              <li>Pre‑wedding shoot + wedding day.</li>
+              <li>Multiple location options.</li>
+              <li>Premium album + cinematic film.</li>
+            </ul>
+            <a href="#contact" class="btn-small">Talk to Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="section-sub">What clients say about D.G Produration Studio &amp; Edit</div>
+    </div>
+    <div class="surface card-hover">
+      <div class="testimonials">
+        <div class="quote card-hover">
+          “आमच्या लग्नाचे फोटो आणि व्हिडिओ दोन्ही अप्रतिम आले. संपूर्ण टीम खूप co‑operative होती आणि D.G Produration Studio &amp; Edit ने सगळे moments सुंदर capture केले.”
+          <br><br><strong>– Ravi Bhosle, Ausa</strong>
+        </div>
+        <div class="quote card-hover">
+          “Kids birthday shoot एकदम candid आणि natural होता. Colors, editing आणि album quality खूप आवडला.”
+          <br><br><strong>– Gopal Dhumal</strong>
+        </div>
+        <div class="quote card-hover">
+          “Pre‑wedding shoot साठी concept आणि locations दोन्ही उत्कृष्ट. Camera समोर comfort वाटला आणि final photos premium वाटले.”
+          <br><br><strong>– Satyam Kamble</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="section-head">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-sub">Call, WhatsApp किंवा studio ला visit करा</div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info card-hover" style="grid-column:1 / -1;">
+        <p><strong>Studio:</strong><br>D.G Produration Studio &amp; Edit<br>Azad Chowk, next to Siddhivinayak Bank, Ausa, Latur, Maharashtra – 413520.</p>
+        <p style="margin-top:8px;"><strong>Timings:</strong> 10:00 AM – 8:00 PM</p>
+        <p style="margin-top:8px;"><strong>Phone:</strong> +91-9588433409</p>
+
+        <p style="margin-top:10px;">
+          <a href="https://wa.me/919922227588?text=Hi%20D.G%20Produration%20Studio%20%26%20Edit%2C%20mala%20wedding%20%2F%20studio%20shoot%20sathi%20booking%20mahiti%20pahije."
+             class="inline-btn whatsapp">
+            WhatsApp
+          </a>
+          <a href="tel:+919922227588" class="inline-btn call">Call Now</a>
+        </p>
+        <p style="margin-top:12px;">Location on map:</p>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.16);margin-bottom:8px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15156.553692160636!2d76.48255469317732!3d18.249474916146504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf7fa9325e7b93%3A0x94c46c9d2e876b59!2sDhumal%20Photo%20Studio!5e0!3m2!1sen!2sin!4v1766514811163!5m2!1sen!2sin"
+            width="100%"
+            height="260"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <p style="margin-top:6px;">Online booking form (Google):</p>
+        <a href="https://forms.gle/5RmcnBq16uPuy4cA7"
+           class="inline-btn"
+           style="background:transparent;border:1px solid rgba(255,255,255,0.4);color:#f5f5f5;">
+          Open Google Booking Form
+        </a>
+
+        <p style="margin-top:12px;">
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/d.g.producstion/?hl=en" target="_blank" rel="noopener">
+            @dg.produration.studio
+          </a><br>
+          <strong>Facebook:</strong>
+          <a href="https://www.facebook.com/profile.php?id=61569565723650" target="_blank" rel="noopener">
+            D.G Produration Studio &amp; Edit
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox-backdrop" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button">Close</button>
+    <img src="" alt="Preview" id="lightbox-img">
+  </div>
+</div>
+
+<footer>
+  <strong>D.G Produration Studio &amp; Edit</strong> • Wedding photographer &amp; photo studio in Ausa, Latur, Maharashtra •
+  Phone: +91-9588433409<br>
+  Address: Azad Chowk, next to Siddhivinayak Bank, Ausa, Latur – 413520, Maharashtra, India.<br>
+  © 2025 D.G Produration Studio &amp; Edit. All rights reserved.
+  <div class="social-icons">
+    <a href="https://www.instagram.com/d.g.producstion/?hl=en" aria-label="Instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61569565723650" aria-label="Facebook" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // पहिल्या load ला नेहमी #home सेट कर
+  (function(){
+    // जर hash नाही किंवा आधीच #home असेल तर काही करू नको
+    if (!window.location.hash || window.location.hash === '#home') return;
+
+    // बाकी कोणताही hash असेल तर quietly #home ने replace कर
+    history.replaceState(null, '', window.location.pathname + window.location.search + '#home');
+
+    // थोड्याशा delay नंतर वर scroll कर (काही browser smooth scroll मुळे)
+    window.scrollTo({ top: 0, left: 0 });
+  })();
+
+  // scroll reveal for .reveal + entrance for .card-hover
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.reveal, .card-hover').forEach(el => observer.observe(el));
+
+  // lightbox
+  const lightbox=document.getElementById('lightbox');
+  const lightboxImg=document.getElementById('lightbox-img');
+  const closeBtn=document.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.shot').forEach(shot=>{
+    shot.addEventListener('click',()=>{
+      const fullSrc=shot.dataset.full || shot.querySelector('img').src;
+      lightboxImg.src=fullSrc;
+      lightbox.classList.add('active');
+    });
+  });
+  closeBtn.addEventListener('click',()=>lightbox.classList.remove('active'));
+  lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('active');});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lightbox.classList.remove('active');});
+
+  // mobile nav
+  const navToggle=document.querySelector('.nav-toggle');
+  const nav=document.querySelector('header nav');
+  navToggle.addEventListener('click',()=>{
+    navToggle.classList.toggle('active');
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',()=>{
+      nav.classList.remove('open');
+      navToggle.classList.remove('active');
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+
