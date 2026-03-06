@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="DG Production logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2d08a" />
+      <stop offset="100%" stop-color="#9f7a34" />
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="224" height="224" rx="44" fill="#0f0f0f" stroke="url(#gold)" stroke-width="8" />
+  <circle cx="120" cy="104" r="52" fill="#141414" stroke="#6f592f" stroke-width="5" />
+  <circle cx="120" cy="104" r="28" fill="none" stroke="url(#gold)" stroke-width="8" />
+  <circle cx="120" cy="104" r="9" fill="#d7b46a" />
+  <rect x="86" y="66" width="68" height="12" rx="6" fill="#1d1d1d" stroke="#6f592f" stroke-width="3" />
+
+  <text x="120" y="176" text-anchor="middle" fill="url(#gold)" font-family="Cinzel, serif" font-size="42" font-weight="700">DG</text>
+  <text x="120" y="200" text-anchor="middle" fill="#d8c39a" font-family="Manrope, sans-serif" font-size="13" letter-spacing="2">PRODUCTION</text>
+</svg>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio gallery with filters and lightbox." />
+  <meta name="keywords" content="wedding gallery, studio gallery, maternity gallery, photography portfolio, DG Production" />
+  <meta name="author" content="DG Production" />
+  <link rel="canonical" href="https://dgproduction.in/gallery.html" />
+  <meta property="og:title" content="Gallery | DG Production" />
+  <meta property="og:description" content="Browse wedding, studio and maternity work from DG Production." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dgproduction.in/gallery.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | DG Production" />
+  <meta name="twitter:description" content="Browse wedding, studio and maternity work from DG Production." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80" />
+  <title>Gallery | DG Production</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="logo.svg" class="brand-logo" alt="DG Production logo" />
+        <span>DG Production</span>
+      </a>
+      <button class="menu-btn" aria-label="Toggle menu">&#9776;</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="wedding.html">Wedding</a>
+        <a href="studio.html">Studio</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-top">
+    <section class="section reveal">
+      <div class="container">
+        <h1>Gallery</h1>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All <span class="count-chip" data-count-for="all">0</span></button>
+          <button class="filter" data-filter="wedding">Wedding <span class="count-chip" data-count-for="wedding">0</span></button>
+          <button class="filter" data-filter="studio">Studio <span class="count-chip" data-count-for="studio">0</span></button>
+          <button class="filter" data-filter="maternity">Maternity <span class="count-chip" data-count-for="maternity">0</span></button>
+        </div>
+        <div id="galleryGrid" class="masonry"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer premium-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.svg" class="footer-logo" alt="DG Production logo" />
+        <h3>DG Production</h3>
+        <p class="muted">Wedding and studio photography team delivering premium visuals, cinematic films and luxury albums.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Phone: +91 99222 27588</p>
+        <p>Mon-Sat: 10:00 AM - 8:00 PM</p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://wa.me/919922227588?text=Hi%20DG%20Production%2C%20I%20want%20a%20custom%20quote%20for%20my%20event." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>(c) 2026 DG Production. All rights reserved.</p>
+      <p>Developer: Satyavan Kamble | Contact: ksatyavan81@gmail.com</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <img id="lightboxImage" alt="Preview" />
+    <button id="lightboxClose" aria-label="Close">x</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
